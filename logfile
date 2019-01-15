@@ -1,0 +1,8 @@
+2019-01-15 11:21:10.056 +07 [13434] FATAL:  database files are incompatible with server
+2019-01-15 11:21:10.056 +07 [13434] DETAIL:  The data directory was initialized by PostgreSQL version 9.5, which is not compatible with this version 10.5.
+2019-01-15 11:37:20.629 +07 [63574] LOG:  listening on IPv6 address "::1", port 5432
+2019-01-15 11:37:20.629 +07 [63574] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-01-15 11:37:20.630 +07 [63574] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-01-15 11:37:20.655 +07 [63575] LOG:  database system was shut down at 2019-01-15 11:37:11 +07
+2019-01-15 11:37:20.668 +07 [63574] LOG:  database system is ready to accept connections
+2019-01-15 11:37:28.984 +07 [63609] FATAL:  database "cms_development" does not exist
