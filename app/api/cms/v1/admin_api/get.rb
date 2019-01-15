@@ -11,6 +11,10 @@ module Cms::V1::AdminAPI
             get '/test_api_2' do 
                 {"content": "test api"}
             end
+
+            get '/test_api_3' do 
+                {"content": "test api 3"}
+            end
         end
     end
 end
