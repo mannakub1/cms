@@ -2,7 +2,7 @@ module Admin::Private::AdminGuard
 
     private
     
-    def can_authenication?
+    def can_authentication?
         return [false, 'Empty userame, Please enter username.'] unless username_have?
         return [false, 'Username can\'t exist, Please register before.'] unless username_exist?
         return [false, 'Empty password, Please enter password.'] unless password_have?
