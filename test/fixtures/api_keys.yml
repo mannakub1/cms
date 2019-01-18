@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  access_token: MyString
+  expires_at: 2019-01-18 16:20:15
+  active: false
+  admin_id: 1
+
+two:
+  access_token: MyString
+  expires_at: 2019-01-18 16:20:15
+  active: false
+  admin_id: 1

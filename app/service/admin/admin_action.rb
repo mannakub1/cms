@@ -2,7 +2,7 @@ class Admin::AdminAction
     include Admin::Private::AdminAction
     include Admin::Private::AdminGuard
 
-    attr_reader :username, :password, :params, :current_member
+    attr_reader :username, :password, :params, :current_member, :token
 
     def initialize(option = {})
 
@@ -27,6 +27,36 @@ class Admin::AdminAction
         fail message unless can_register
 
         process_register
+    end
+
+    def check_token(params_token)
+        @token = ApiKey.find_by(access_token: params_token)
+        
+        if @token && !@token.expired?
+          set_time_expiration
+        else
+          false
+        end
+    end
+
+    def logout(params_token)
+        @token = ApiKey.find_by(access_token: params_token)
+    
+        if @token
+          set_expiration_out
+          true
+        else
+          false
+        end
+    
+    end
+    
+    def set_expiration_out
+        @token.update_attributes(expires_at: DateTime.now.utc)
+    end
+    
+    def set_time_expiration
+        @token.update_attributes(expires_at: DateTime.now.utc + 30.minutes)
     end
 
     def current_member
