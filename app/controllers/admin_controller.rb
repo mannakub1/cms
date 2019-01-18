@@ -1,6 +1,6 @@
 class AdminController < ApplicationController
 
     def home
-        contents = "Hello World !!"
+        @contents = "Hello World !!"
     end
 end
