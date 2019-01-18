@@ -7,4 +7,8 @@ module Admin::Private::AdminAction
         
         true
     end
+
+    def process_register
+        Member.create(params)
+    end
 end
