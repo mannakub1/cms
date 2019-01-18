@@ -3,4 +3,5 @@ Cms::Application.routes.draw do
   mount Cms::API => '/'
   
   get '/admin/home', to: 'admin#home'
+  get '/admin/page', to: 'admin#page'
 end
