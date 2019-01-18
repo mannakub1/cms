@@ -14,6 +14,10 @@ class AdminController < ApplicationController
         @header = "Page"
         render layout: "layout_admin"
     end
+
+    def login
+
+    end
  
     private
 
