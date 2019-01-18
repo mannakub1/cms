@@ -3,8 +3,6 @@
 one:
   username: MyString
   password_digest: MyString
-  first_name: MyString
-  last_name: MyString
   email: MyString
   age: 1
   address: MyString
@@ -12,8 +10,6 @@ one:
 two:
   username: MyString
   password_digest: MyString
-  first_name: MyString
-  last_name: MyString
   email: MyString
   age: 1
   address: MyString
