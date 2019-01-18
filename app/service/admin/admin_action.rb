@@ -12,10 +12,10 @@ class Admin::AdminAction
         @username = params[:username]
         @password = params[:password]
 
-        can_authenication, message = can_authenication?
+        can_authentication, message = can_authentication?
         fail message unless can_authenication
 
-        process_authenication
+        process_authentication
     end
 
 
