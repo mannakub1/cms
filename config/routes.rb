@@ -5,4 +5,6 @@ Cms::Application.routes.draw do
   get '/admin/home', to: 'admin#home'
   get '/admin/page', to: 'admin#page'
   get '/admin/login', to: 'admin#login'
+  post '/admin/authen', to: 'admin#authen'
+  # get '/admin/authen', to: 'admin#authen'
 end

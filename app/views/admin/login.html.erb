@@ -1,0 +1,84 @@
+<!-- 
+<dialog class="mdl-dialog">
+    <h4 class="mdl-dialog__title">Authentication</h4>
+    <div class="mdl-dialog__content">
+        <p>Please your enter username and password.</p>
+        <form action="<%= admin_authen_path %>" method="post">
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="sample1" name="username">
+                <label class="mdl-textfield__label" for="sample1">Username...</label>
+            </div> 
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="password" id="sample2" name="password">
+                <label class="mdl-textfield__label" for="sample1">Password...</label>
+            </div>  
+            <div class="mdl-dialog__actions">
+                <button type="button" class="mdl-button" type="submit">Ok</button>
+                <button type="button" class="mdl-button close">Cancel</button>
+            </div>
+             
+
+
+
+        </form>
+    </div>
+</dialog>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script>
+    
+                var dialog = document.querySelector('dialog');
+                dialog.showModal();
+            
+                dialog.querySelector('.close').addEventListener('click', function() {
+                    dialog.close();
+                });
+            </script>
+            -->
+
+<div class="modal fade"  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/admin/authen" method="post">
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Username:</label>
+                        <input type="text" class="form-control" name="username" id="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Password:</label>
+                        <input type="password" class="form-control" name="password" id="password">
+                    </div>
+                
+            </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Register</button>
+            <button class="btn btn-primary" type="submit" >Ok</button>
+            
+            <%# <%= button_to "OK", admin_authen_path(username: name[:username] , password: :password), :id => "open-contacts-dialog-btn", %>
+                <%# :class => "btn btn-primary",:method => :post %> 
+        </form>
+        </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $('#exampleModal').modal({focus: true}).on('shown.bs.modal', function (event) {
+        focus:true;
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        var recipient = button.data('whatever') // Extract info from data-* attributes
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        
+        var modal = $(this)
+        })
+ </script>
